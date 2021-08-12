@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Daily Journal</title>
+        <link rel="stylesheet" href="./styles/main.css">
+    </head>
+
+    <body>
+        <header>
+            <form action="">
+                <fieldset>
+                    <label for="journalDate">Date of Entry</label>
+                    <input type="date" name="journalDate" id="journalDate"></input>
+                </fieldset>
+                <fieldset>
+                    <label for="conceptsCovered">Concepts Covered</label>
+                    <input type="text" name="conceptsCovered" id="conceptsCovered"></input>
+                </fieldset>
+                <fieldset>
+                    <label for="journalEntry">Journal Entry</label>
+                    <textarea rows="5" cols="60" name="text" placeholder="Enter text"></textarea>
+
+                    <!-- <input type="text" name="journalEntry" id="journalEntry"></input> -->
+                </fieldset>
+                <fieldset>
+                    <label for="mood">Mood for the day</label>
+                    <select id="moods" name="moods">
+                        <option value="happy">Happy</option>
+                        <option value="sad">Sad</option>
+                        <option value="tired">Tired</option>
+                        <option value="excited">Excited</option>
+                        <option value="calm">Calm</option>
+                        <option value="cranky">Cranky</option>
+                        <option value="dreamy">Dreamy</option>
+                    </select>              
+                </fieldset>
+                <div>
+                    <input type="submit" value="Record Journal Entry" name="submit" id="submit"></input>
+                </div>      
+            </form>
+        </header>
+        <main id="container">
+
+        </main>
+        <footer>
+
+        </footer>
+
+        <script type="module" src="./scripts/main.js"></script>
+    </body>
+</html>
