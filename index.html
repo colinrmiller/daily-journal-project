@@ -8,40 +8,46 @@
 
     <body>
         <header>
-            <form action="">
-                <fieldset>
-                    <label for="journalDate">Date of Entry</label>
-                    <input type="date" name="journalDate" id="journalDate"></input>
-                </fieldset>
-                <fieldset>
-                    <label for="conceptsCovered">Concepts Covered</label>
-                    <input type="text" name="conceptsCovered" id="conceptsCovered"></input>
-                </fieldset>
-                <fieldset>
-                    <label for="journalEntry">Journal Entry</label>
-                    <textarea rows="5" cols="60" name="text" placeholder="Enter text"></textarea>
-
-                    <!-- <input type="text" name="journalEntry" id="journalEntry"></input> -->
-                </fieldset>
-                <fieldset>
-                    <label for="mood">Mood for the day</label>
-                    <select id="moods" name="moods">
-                        <option value="happy">Happy</option>
-                        <option value="sad">Sad</option>
-                        <option value="tired">Tired</option>
-                        <option value="excited">Excited</option>
-                        <option value="calm">Calm</option>
-                        <option value="cranky">Cranky</option>
-                        <option value="dreamy">Dreamy</option>
-                    </select>              
-                </fieldset>
-                <div>
-                    <input type="submit" value="Record Journal Entry" name="submit" id="submit"></input>
-                </div>      
-            </form>
+            <h1>Colin's Daily Journal</h1>
         </header>
-        <main id="container">
-
+        <main id="content">
+            <form action="">
+                <section class="field">
+                    <section class="field__modifiers">
+                        <fieldset>
+                            <label for="journalDate">Date of Entry</label>
+                            <input type="date" name="journalDate" id="journalDate"></input>
+                        </fieldset>
+                        <fieldset>
+                            <label for="conceptsCovered">Concepts Covered</label>
+                            <input type="text" name="conceptsCovered" id="conceptsCovered"></input>
+                        </fieldset>
+                        <fieldset>
+                            <label for="mood">Mood for the day</label>
+                            <select id="moods" name="moods">
+                                <option value="happy">Happy</option>
+                                <option value="sad">Sad</option>
+                                <option value="tired">Tired</option>
+                                <option value="excited">Excited</option>
+                                <option value="calm">Calm</option>
+                                <option value="cranky">Cranky</option>
+                                <option value="dreamy">Dreamy</option>
+                            </select>              
+                        </fieldset>
+                    </section>
+                    <section class="field__entry">
+                        <fieldset>
+                            <label for="journalEntry">Journal Entry</label>
+                            <textarea rows="5" cols="60" name="text" placeholder="Enter text"></textarea>
+        
+                            <!-- <input type="text" name="journalEntry" id="journalEntry"></input> -->
+                        </fieldset>
+                    </section>
+                    <div class="field__submit">
+                        <input type="submit" value="Record Journal Entry" name="submit" id="submit"></input>
+                    </div>      
+                </section>
+            </form>
         </main>
         <footer>
 

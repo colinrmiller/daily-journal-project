@@ -2,6 +2,10 @@
 
 /*Typography
 --------------------------------------------------------------*/
+html, body {
+	height: 100%;
+	background-color: darkgray;
+}
 body,
 button,
 input,
@@ -13,6 +17,27 @@ textarea {
 	line-height: 1.5;
 }
 
+main {
+	height: 80%;
+}
+
+form {
+	height: 100%;
+}
+
+header {
+	border-radius: 3px;
+	color: whitesmoke;
+	border: red double 1px;
+	background-color: rgb(28, 28, 117);
+	text-align: center;
+}
+
+header h1 {
+	justify-content: center;
+	height: 100%;
+}
+
 h1,h2,h3,h4,h5,h6 {
   font-family: "Patua One", serif;
   letter-spacing: 2px;
@@ -20,9 +45,11 @@ h1,h2,h3,h4,h5,h6 {
 
 fieldset {
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 	border: none;
 }
+
+
 
 fieldset input {
 	width: 12em;
@@ -38,4 +65,29 @@ textarea {
 
 #journalEntry {
 	height: 5em;
+}
+
+main form {
+    background: white;
+    border-radius: 1em;
+    border: solid;
+    margin-top: 1em;
+    padding-bottom: 1em;
+    padding-left: 1em;
+}
+
+.field__modifiers {
+	display: flex; 
+	flex-direction: column;
+} 
+
+.field {
+	display: flex;
+	flex-direction: row;
+
+}
+.field__submit {
+	display: flex;
+    justify-content: flex-end;
+    margin-right: 2em;
 }
