@@ -2,92 +2,307 @@
 
 /*Typography
 --------------------------------------------------------------*/
-html, body {
-	height: 100%;
-	background-color: darkgray;
+a,
+a:visited,
+a:hover,
+a:active {
+    color: inherit;
+}
+
+html {
+    height: 100%;
+    background-color: rgb(60, 100, 177, 0.06);
+    font-family: Lato;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 32px;
+    /* identical to box height, or 133% */
+}
+
+body {
+    height: 100%;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 32px;
+    /* identical to box height, or 133% */
 }
 body,
 button,
 input,
 select,
 textarea {
-	color: #404040;
-	font-family: "Comfortaa", Arial, sans-serif;
-	font-size: 14px;
-	line-height: 1.5;
 }
-
 main {
-	height: 80%;
+    height: 80%;
 }
 
 form {
-	height: 100%;
 }
 
 header {
-	border-radius: 3px;
-	color: whitesmoke;
-	border: red double 1px;
-	background-color: rgb(28, 28, 117);
-	text-align: center;
+    color: rgb(60, 100, 177);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    letter-spacing: 0.2px;
+    text-transform: uppercase;
+    height: 44px;
+    font-family: Lato;
 }
 
 header h1 {
-	justify-content: center;
-	height: 100%;
+    font-style: normal;
+    letter-spacing: 0;
+    font-size: 18px;
+    margin-left: 1em;
+    flex: 7;
+    margin-left: 60px;
 }
 
-h1,h2,h3,h4,h5,h6 {
-  font-family: "Patua One", serif;
-  letter-spacing: 2px;
+header h1 + div {
+    flex: 3;
+}
+
+header div {
+    flex: 2;
+}
+
+header a {
+    text-decoration: none;
+}
+
+header > div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+    height: 22px;
+    font-size: 14px;
+    padding-right: 2em;
+    text-transform: initial;
+}
+
+header > div > * {
+    padding-inline: 8px;
+}
+
+header #sign-up {
+    background-color: rgb(60, 100, 177);
+    color: white;
+    line-height: 23px;
+}
+
+header #history,
+#new-entry {
+    border-radius: 3px;
+    color: rgb(118, 118, 118);
+    line-height: 23px;
+    margin-left: 1em;
+    width: 100px;
+    line-height: 23px;
+}
+
+header #new-entry {
+    margin-left: 1em;
 }
 
 fieldset {
-	display: flex;
-	flex-direction: row;
-	border: none;
+    display: flex;
+    flex-direction: row;
+    margin-left: 2px;
+    margin-right: 2px;
+    padding-top: 0.35em;
+    padding-bottom: 0.625em;
+    padding-left: 0.75em;
+    padding-right: 0.75em;
+    border: none;
 }
 
+#journal-entry {
+    margin: 0px;
+    width: 265px;
+    height: 330px;
+    margin-left: 13px;
+    flex: 5;
+}
 
+/* fieldset > div {
 
-fieldset input {
+	
+    display: flex;
+    flex-direction: column;
+
+} */
+
+fieldset > div {
+    margin-left: 16px;
+    font-size: 12px;
+    color: rgb(60, 100, 177);
+}
+
+form label {
+    text-transform: uppercase;
+}
+
+input[type="text"],
+input[type="date"],
+select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: -3px;
+}
+
+input[type="submit"] {
+    width: 100%;
+    background-color: #4caf50;
+    color: white;
+    padding: 14px 20px;
+    margin: 26px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#mood * {
+    color: rgb(118, 118, 118);
+}
+
+#mood *:hover {
+    color: rgb(118, 118, 118);
+}
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+div {
+    border-radius: 5px;
+    /* background-color: #f2f2f2; */
+    padding: 20px;
+}
+
+/* 
+fieldset > div label {
+    font-size: 9px;
+    height: 24px;
+    font-style: revert;
+    color: rgb(60, 100, 177);
+	padding-left: 3px;
+
+}
+
+fieldset div input {
+    width: 106px;
+	top: -8px;
+    position: relative;
+}
+#con {
 	width: 12em;
 }
 
-#moods {
-	width: 12em;
+ */
+
+.field {
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+}
+.field__entry fieldset {
+    height: 100%;
+}
+
+.field__entry fieldset div {
+    height: 100%;
+    flex: 3;
+}
+.field__submit {
+    align-items: flex-end;
+}
+
+#submit {
+    height: 4em;
+    margin-top: 36px;
 }
 
 textarea {
-	width: 60%;
+    width: 60%;
 }
 
 #journalEntry {
-	height: 5em;
+    height: 5em;
+    flex: 5;
 }
 
-main form {
-    background: white;
-    border-radius: 1em;
-    border: solid;
-    margin-top: 1em;
+main form,
+#entryLog {
+    margin-top: -15px;
     padding-bottom: 1em;
-    padding-left: 1em;
+    padding-left: 33px;
+    padding-right: 0;
+}
+
+label,
+input {
+    display: inline-block;
+    vertical-align: baseline;
+}
+
+form,
+input {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+.field {
+    height: 100%;
+}
+
+.field__input {
+    display: flex;
+    flex-direction: row;
+    height: 80%;
 }
 
 .field__modifiers {
-	display: flex; 
-	flex-direction: column;
-} 
-
-.field {
-	display: flex;
-	flex-direction: row;
-
+    display: flex;
+    flex-direction: column;
 }
+
+.field__modifiers label {
+    white-space: nowrap;
+}
+
 .field__submit {
-	display: flex;
+    display: flex;
     justify-content: flex-end;
     margin-right: 2em;
+}
+
+#entryLog > section {
+    background: white;
+    border-radius: 1px;
+    border: solid grey 1px;
+    margin-top: 1em;
+    padding-bottom: 1em;
+    padding-left: 1em;
+    margin-right: 1em;
+}
+
+.journalEntry__footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 10px;
+    padding-right: 1em;
+}
+*/ #entryLog:first-child {
+    margin-top: -10px;
 }
