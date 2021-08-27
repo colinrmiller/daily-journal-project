@@ -1,21 +1,96 @@
+
+
+
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>Daily Journal</title>
-        <link rel="stylesheet" href="./styles/main.css">
-    </head>
 
-    <body>
+<head>
+    <meta charset="utf-8">
+    <title>Daily Journal</title>
+    <link rel="stylesheet" href="./styles/main.css">
+</head>
+
+<body>
+    <!-- <header></header> -->
+    <div class="aside">
+        <div class="aside-header"></div>
+        <div class="aside-bar"></div>
+        <div class="aside-bar"></div>
+
+    </div>
+    <main>
         <header>
-            <h1>Colin's Daily Journal</h1>
+            New Entry
         </header>
-        <main id="content">
-            <form action="">
-                <section class="field">
+
+    </main>
+</body>
+
+
+<!-- <!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Daily Journal</title>
+    <link rel="stylesheet" href="./styles/main.css">
+</head>
+
+<body>
+    <header>
+        <h1>Colin's Daily Journal</h1>
+        <div>
+            <a id="new-entry" href="#"> New Entry </a>
+            <a id="history" href="#"> History </a>
+        </div>
+        <div>
+            <a id="sign-in" href="#"> Sign In </a>
+            <a id="sign-up" href="#"> Sign Up </a>
+        </div>
+    </header>
+    <main>
+        <section class="field__entry">
+            <fieldset>
+                <textarea id="journal-entry" rows="5" cols="60" name="text" placeholder="Enter text"></textarea>
+                <div>
+                    <form action="/action_page.php">
+                      <label for="date">Date</label>
+                      <input type="date" id="date" name="date">
+                  
+                      <label for="concepts-covered">Concepts Covered</label>
+                      <input type="text" id="concepts" name="concepts-covered" placeholder="eg. HTML, array methods...">
+                  
+                      <label for="mood">Mood</label>
+                      <select id="mood" name="mood" selectedIndex="2">
+                        <option value="">--How Are You Feeling Today?--</option>
+                        <option value="happy">Happy</option>
+                        <option value="sad">Sad</option>
+                        <option value="tired">Tired</option>
+                        <option value="excited">Excited</option>
+                        <option value="calm">Calm</option>
+                        <option value="cranky">Cranky</option>
+                        <option value="dreamy">Dreamy</option>
+                        <option value="dreamy">Good</option>
+                        <option value="dreamy">Pretty Good</option>
+              </select>
+                    
+                      <input type="submit" value="Submit">
+                    </form>
+                  </div> -->
+                                  <!-- <label class="journal-entry" for="journalEntry">Journal Entry</label> -->
+            <!-- </fieldset>
+        </section>
+    </section>
+    </main> -->
+    <!-- <main id="content">
+        <form action="">
+            <section class="field">
+                <section class="field__input">
                     <section class="field__modifiers">
                         <fieldset>
-                            <label for="journalDate">Date of Entry</label>
+                            <div>
+                                <label for="journalDate">Date of Entry</label>
+                            </div>
                             <input type="date" name="journalDate" id="journalDate"></input>
                         </fieldset>
                         <fieldset>
@@ -32,27 +107,26 @@
                                 <option value="calm">Calm</option>
                                 <option value="cranky">Cranky</option>
                                 <option value="dreamy">Dreamy</option>
-                            </select>              
+                                <option value="dreamy">Good</option>
+                                <option value="dreamy">Pretty Good</option>
+                            </select>
                         </fieldset>
                     </section>
-                    <section class="field__entry">
-                        <fieldset>
-                            <label for="journalEntry">Journal Entry</label>
-                            <textarea rows="5" cols="60" name="text" placeholder="Enter text"></textarea>
-        
-                            <!-- <input type="text" name="journalEntry" id="journalEntry"></input> -->
-                        </fieldset>
-                    </section>
-                    <div class="field__submit">
-                        <input type="submit" value="Record Journal Entry" name="submit" id="submit"></input>
-                    </div>      
-                </section>
-            </form>
-        </main>
-        <footer>
+                <div class="field__submit">
+                    <input type="submit" value="Record Journal Entry" name="submit" id="submit"></input>
+                </div>
+            </section>
+        </form>
+        <section id="entryLog">
+            <h2>Entries</h2>
 
-        </footer>
+        </section>
+    </main> -->
+    <!-- <footer>
 
-        <script type="module" src="./scripts/main.js"></script>
-    </body>
-</html>
+    </footer>
+
+    <script type="module" src="./scripts/main.js"></script>
+</body>
+
+</html> -->
