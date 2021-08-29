@@ -13,23 +13,23 @@ const journal = [
         date: "08/14/2021",
         concept: "HTML & CSS",
         entry: "We talked about HTML components and how to make grid layouts with Flexbox in CSS.",
-        mood: "Ok"
+        mood: "Ok",
     },
     {
         id: 2,
         date: "08/19/2021",
         concept: "JS Modules",
         entry: "We learned how to import and export JS objects, as well as for..of loops.",
-        mood: "Pretty Good"
+        mood: "Pretty Good",
     },
     {
         id: 3,
         date: "08/20/2021",
         concept: "JS Modules cont.",
         entry: "We implemented the concepts of JS Modules, DOM manipulation, and iterator methods",
-        mood: "Good"
-    }
-]
+        mood: "Good",
+    },
+];
 
 /*
     You export a function that provides a version of the
@@ -39,6 +39,6 @@ export const getJournalEntries = () => {
     const sortedByDate = journal.sort(
         (currentEntry, nextEntry) =>
             Date.parse(currentEntry.date) - Date.parse(nextEntry.date)
-    )
-    return sortedByDate
-}
+    );
+    return sortedByDate;
+};

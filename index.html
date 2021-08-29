@@ -9,7 +9,12 @@
     <body>
         <!-- <header></header> -->
         <div class="aside">
-            <div class="aside-header"></div>
+            <div class="aside-header">
+                <div class="aside-header__top"></div>
+                <div class="aside-header__name">
+                    <h2>Colin Miller</h2>
+                </div>
+            </div>
             <div class="aside-bar">
                 <div class="aside-bar__item">
                     <div class="aside-bar__item--icon">
@@ -31,9 +36,20 @@
                 </div>
             </div>
         </div>
+
         <main>
-            <header><h1>New Entry</h1></header>
+            <header>
+                <h1>New Entry</h1>
+                <a class="new-entry">
+                    <div class="icon-add">
+                        <img src="icons/outline_add_white_24dp.png" />
+                    </div>
+                    <p id="new-entry__text">New Entry</p>
+                </a>
+            </header>
         </main>
+
+        <section class="page-body"></section>
     </body>
 
     <!-- <!doctype html>
