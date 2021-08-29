@@ -1,102 +1,97 @@
 @import url("https://fonts.googleapis.com/css?family=Comfortaa|Patua+One");
 
-
 /* TEMPLATE */
 /* https://www.react-most-wanted.com/docu/getting_started */
 
 /*Typography
 --------------------------------------------------------------*/
-a, a:visited, a:hover, a:active {
-	color: inherit;
-  }
+a,
+a:visited,
+a:hover,
+a:active {
+    color: inherit;
+}
 
-html, body {
-	margin:0
+html,
+body {
+    margin: 0;
 }
 header {
-	display: flex;
-	flex-flow: row;
-	justify-content: space-between;
-	font-size: 13px;
-	font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-	height: 60px;
-	background-color: #343434;
-	padding-left: 13px;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    font-size: 13px;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    height: 60px;
+    background-color: #343434;
+    padding-left: 13px;
     line-height: 30px;
     color: white;
 }
 
 h1 {
-	margin-top: 0;
-	padding-block: 15px;
-	padding-left: 28px; 	
+    margin-top: 0;
+    padding-block: 15px;
+    padding-left: 28px;
 }
 
 .new-entry {
-	display: flex;
-	background: #676666;
-
+    display: flex;
+    background: #676666;
 }
 
-
-
 header p {
-	margin-right: 31px;
+    margin-right: 31px;
     font-size: 20px;
     margin-block: 15px;
     margin-left: 9px;
 }
 
 .icon-add img {
-	margin-left: 10px;
-	height: 38px;
+    margin-left: 10px;
+    height: 38px;
     margin-block: 11px;
-	
 }
-
 
 .aside {
-	flex: 3;
-	border-right: solid 1px rgba(0, 0, 0, 0.25);
-	height: 1000px;
+    flex: 3;
+    border-right: solid 1px rgba(0, 0, 0, 0.25);
+    height: 1000px;
 }
 .aside-header {
-	background-color: rgba(0, 0, 0, 0.87);
+    background-color: rgba(0, 0, 0, 0.87);
     height: 137px;
     box-shadow: 0px 5px 1px rgb(0 0 0 / 14%);
     margin-right: -1px;
-	
 }
-
 
 .aside-header__top {
     height: 66px;
 }
 
 .aside-header__name {
-	color: white;
-	padding-left: 30px;
-	font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-	margin-left: 145px;
-
+    color: white;
+    padding-left: 30px;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    margin-left: 145px;
 }
 
 .aside-bar {
-	box-sizing: border-box;
-	font-family:"Roboto", "Helvetica", "Arial", sans-serif;
-	/* height : 50px; */
-	/* border-top: solid 1px grey; */
+    box-sizing: border-box;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    /* height : 50px; */
+    /* border-top: solid 1px grey; */
 }
 
 .aside-bar__item {
-	display: flex;
+    display: flex;
     flex-direction: row;
-	height: 80px;
-	/* border-bottom: solid 1px rgba(0, 0, 0, 0.25); */
+    height: 80px;
+    /* border-bottom: solid 1px rgba(0, 0, 0, 0.25); */
 }
 
 .aside-bar__item h4 {
-	line-height: 30px;
+    line-height: 30px;
     padding-left: 17px;
     margin: auto;
     font-size: 22px;
@@ -104,240 +99,101 @@ header p {
 }
 
 .aside-bar__item--icon {
-	padding-block: 5%;
-	margin-left: 24px;
-
+    padding-block: 5%;
+    margin-left: 24px;
 }
 
 main {
-	flex: 10;
+    flex: 10;
 }
 
 body {
-	display: flex;
+    display: flex;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  /* First Try */
-html {
-	/* height: 100%;
-	background-color:rgb(60, 100, 177, .06);
-	font-family: Lato;
-	font-style: normal;
-	font-weight: bold;
-	font-size: 24px;
-	line-height: 32px; */
-	/* identical to box height, or 133% */
-}
-
-body {
-	/* height: 100%;
-	font-family: Lato;
-	font-style: normal;
-	font-weight: bold;
-	font-size: 24px;
-	line-height: 32px; */
-	/* identical to box height, or 133% */
-}
-/* body,
-button,
-input,
-select,
-textarea {
-}
- main {
-	height: 80%;
-}
-
-form {
-}
-
-header {
-	color: rgb(60, 100, 177);
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	letter-spacing: 0.2px;
-	text-transform: uppercase;
-	height: 44px;
-	font-family: Lato;
-}
-
-header h1 {
-	font-style: normal;
-    letter-spacing: 0;
-    font-size: 18px;
-	margin-left: 1em;
-	flex: 7;
-	margin-left: 60px;
-}
-
-header h1 + div {
-	flex: 3;
-}
-
-header div {
-	flex:2;
-}
-
-header a {
-	text-decoration: none;
-}
-
-header > div {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	padding: 0;
-	height: 22px;
-	font-size: 14px;
-	padding-right: 2em;
-	text-transform: initial;
-}
-
-header > div > *{
-	padding-inline: 8px;
-
-}
-
-
-header #sign-up {
-	background-color: rgb(60, 100, 177);
-	color: white;
-	line-height: 23px;
-}
-
-header #history, #new-entry {
-	border-radius: 3px;
-	color: rgb(118, 118, 118);
-	line-height: 23px;
-	margin-left: 1em;
-	width: 100px;
-	line-height: 23px;
-}
-
-header #new-entry {
-	margin-left: 1em;
-}
-
-
 
 fieldset {
-	display: flex;
-	flex-direction: row;
-	margin-left: 2px;
-	margin-right: 2px;
-	padding-top: 0.35em;
-	padding-bottom: 0.625em;
-	padding-left: 0.75em;
-	padding-right: 0.75em;
-	border: none;
+    display: flex;
+    flex-direction: row;
+    margin-left: 2px;
+    margin-right: 2px;
+    padding-top: 0.35em;
+    padding-bottom: 0.625em;
+    padding-left: 0.75em;
+    padding-right: 0.75em;
+    border: none;
 }
 
-#journal-entry {
+.journal-entry {
+    margin-inline: 22%;
+    margin-block: 10%;
+    font-size: 20px;
+}
+
+.journal-entry #new-journal-entry {
     margin: 0px;
     width: 265px;
     height: 330px;
-	margin-left: 13px;
-	flex:5
-} */
+    margin-left: 13px;
+    flex: 5;
+}
 
 /* fieldset > div {
-
 	
     display: flex;
     flex-direction: column;
-
 } */
 
-/* fieldset > div {
-	margin-left: 16px;
-	font-size: 12px;
-	color: rgb(60, 100, 177);;
+fieldset > div {
+    margin-left: 16px;
+    font-size: 12px;
+    color: rgb(60, 100, 177);
 }
 
 form label {
-	text-transform: uppercase;
+    text-transform: uppercase;
+    margin-block: 11px;
 }
 
-
-input[type=text], input[type=date], select {
-	width: 100%;
-	padding: 12px 20px;
-	margin: 8px 0;
-	display: inline-block;
-	border: 1px solid #ccc;
-	border-radius: 4px;
-	box-sizing: border-box;
-	margin-top: -3px;
+input[type="text"],
+input[type="date"],
+select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: -3px;
 }
 
-input[type=submit] {
-	width: 100%;
-	background-color: #4CAF50;
-	color: white;
-	padding: 14px 20px;
-	margin: 26px 0;
-	border: none;
-	border-radius: 4px;
-	cursor: pointer;
+input[type="submit"] {
+    width: 100%;
+    background-color: #4caf50;
+    color: white;
+    padding: 14px 20px;
+    margin: 26px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
 }
 
 #mood * {
-	color: rgb(118, 118, 118);;
+    color: rgb(118, 118, 118);
 }
 
 #mood *:hover {
-	color: rgb(118, 118, 118);
+    color: rgb(118, 118, 118);
 }
-input[type=submit]:hover {
-	background-color: #45a049;
+input[type="submit"]:hover {
+    background-color: #45a049;
 }
 
-div {
-	border-radius: 5px; */
-	/* background-color: #f2f2f2; */
-	/* padding: 20px;
+/* div {
+    border-radius: 5px;
+    /* background-color: #f2f2f2; */
+/* padding: 20px;
 } */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* 
 fieldset > div label {
@@ -346,9 +202,7 @@ fieldset > div label {
     font-style: revert;
     color: rgb(60, 100, 177);
 	padding-left: 3px;
-
 }
-
 fieldset div input {
     width: 106px;
 	top: -8px;
@@ -357,101 +211,107 @@ fieldset div input {
 #con {
 	width: 12em;
 }
-
  */
 
 .field {
-	justify-content: space-between;
+    justify-content: space-between;
     display: flex;
-	flex-direction: column;
+    flex-direction: column;
 }
 .field__entry fieldset {
-	height: 100%;
+    height: 100%;
+    padding-top: 39px;
+    margin-inline: 26px;
 }
 
 .field__entry fieldset div {
-	height: 100%;
-	flex:3;
+    height: 100%;
+    flex: 3;
 }
 .field__submit {
-	align-items: flex-end;
+    align-items: flex-end;
 }
 
 #submit {
-	height: 2em;
+    height: 4em;
+    margin-top: 36px;
 }
 
 textarea {
-	width: 60%;
+    width: 60%;
 }
 
 #journalEntry {
-	height: 5em;
-	flex:5;
+    height: 5em;
+    flex: 5;
 }
 
-main form, #entryLog {
+main form,
+#entryLog {
     margin-top: -15px;
     padding-bottom: 1em;
-    padding-left: 3em;
-	padding-right: 2em;
+    padding-left: 33px;
+    padding-right: 0;
 }
 
-label, input {
-	display: inline-block;
-	vertical-align: baseline;
+label,
+input {
+    display: inline-block;
+    vertical-align: baseline;
 }
 
-form, input {
+form,
+input {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
 }
 
 .field {
-	height: 100%;
+    height: 100%;
 }
 
 .field__input {
-	display: flex; 
-	flex-direction: row;
-	height: 80%;
+    display: flex;
+    flex-direction: row;
+    height: 80%;
 }
-
 
 .field__modifiers {
-	display: flex;
-	flex-direction: column;
-} 
-
-.field__modifiers label {
-	white-space: nowrap;
+    display: flex;
+    flex-direction: column;
 }
 
+.field__modifiers label {
+    white-space: nowrap;
+}
 
 .field__submit {
-	display: flex;
+    display: flex;
     justify-content: flex-end;
     margin-right: 2em;
 }
 
-
-
-
 #entryLog > section {
     background: white;
-    border-radius: 1em;
-    border: solid;
+    border-radius: 1px;
+    border: solid grey 1px;
     margin-top: 1em;
     padding-bottom: 1em;
     padding-left: 1em;
-	margin-right:  1em;
+    margin-right: 1em;
 }
 
-.journalEntry__footer {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	font-size: 10px;
-	padding-right: 1em;
-} */
+.journal-entry__text {
+    font-size: 24px;
+}
+.journal-entry__footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 16px;
+    padding-right: 1em;
+}
+*/ #entryLog:first-child {
+    margin-top: -10px;
+}

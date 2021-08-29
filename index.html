@@ -15,26 +15,7 @@
                     <h2>Colin Miller</h2>
                 </div>
             </div>
-            <div class="aside-bar">
-                <div class="aside-bar__item">
-                    <div class="aside-bar__item--icon">
-                        <img src="icons/outline_article_black_24dp.png" />
-                    </div>
-                    <h4>Entries</h4>
-                </div>
-                <div class="aside-bar__item">
-                    <div class="aside-bar__item--icon">
-                        <img src="icons/outline_article_black_24dp.png" />
-                    </div>
-                    <h4>Entries</h4>
-                </div>
-                <div class="aside-bar__item">
-                    <div class="aside-bar__item--icon">
-                        <img src="icons/outline_article_black_24dp.png" />
-                    </div>
-                    <h4>Entries</h4>
-                </div>
-            </div>
+            <div class="aside-bar" id="aside-bar"></div>
         </div>
 
         <main>
@@ -47,9 +28,61 @@
                     <p id="new-entry__text">New Entry</p>
                 </a>
             </header>
+            <section class="page-body">
+                <section class="field__entry">
+                    <fieldset>
+                        <textarea
+                            id="new-journal-entry"
+                            rows="5"
+                            cols="60"
+                            name="text"
+                            placeholder="Enter text"
+                        ></textarea>
+                        <div>
+                            <form action="/action_page.php">
+                                <label for="date">Date</label>
+                                <input type="date" id="date" name="date" />
+
+                                <label for="concepts-covered"
+                                    >Concepts Covered</label
+                                >
+                                <input
+                                    type="text"
+                                    id="concepts"
+                                    name="concepts-covered"
+                                    placeholder="eg. HTML, array methods..."
+                                />
+
+                                <label for="mood">Mood</label>
+                                <select id="mood" name="mood" selectedIndex="2">
+                                    <option value="">
+                                        --How Are You Feeling Today?--
+                                    </option>
+                                    <option value="happy">Happy</option>
+                                    <option value="sad">Sad</option>
+                                    <option value="tired">Tired</option>
+                                    <option value="excited">Excited</option>
+                                    <option value="calm">Calm</option>
+                                    <option value="cranky">Cranky</option>
+                                    <option value="dreamy">Dreamy</option>
+                                    <option value="dreamy">Good</option>
+                                    <option value="dreamy">Pretty Good</option>
+                                </select>
+
+                                <input
+                                    type="submit"
+                                    value="Submit"
+                                    id="submit"
+                                />
+                            </form>
+                        </div>
+                        <!-- <label class="journal-entry" for="journalEntry">Journal Entry</label> -->
+                    </fieldset>
+                </section>
+            </section>
         </main>
 
-        <section class="page-body"></section>
+        <script type="module" src="scripts/main.js"></script>
     </body>
 
     <!-- <!doctype html>

@@ -42,3 +42,7 @@ export const getJournalEntries = () => {
     );
     return sortedByDate;
 };
+
+export const getSingleJournalEntry = (entryId) => {
+    return journal.filter((obj) => obj.id == entryId);
+};
