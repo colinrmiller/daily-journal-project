@@ -63,6 +63,7 @@ header p {
     height: 137px;
     box-shadow: 0px 5px 1px rgb(0 0 0 / 14%);
     margin-right: -1px;
+    margin-bottom: 8px;
 }
 
 .aside-header__top {
@@ -91,7 +92,6 @@ header p {
 }
 
 .aside-bar__item h4 {
-    line-height: 30px;
     padding-left: 17px;
     margin: auto;
     font-size: 22px;
@@ -99,7 +99,7 @@ header p {
 }
 
 .aside-bar__item--icon {
-    padding-block: 5%;
+    padding-block: 4%;
     margin-left: 24px;
 }
 
@@ -124,34 +124,77 @@ fieldset {
 }
 
 .journal-entry {
+    border-radius: 15px;
+    border: 2px solid black;
+    padding-inline: 17px;
     margin-inline: 22%;
     margin-block: 10%;
     font-size: 20px;
 }
 
+#entry-form {
+    flex: 5;
+    /* background-color: red; */
+    height: 350px;
+}
 .journal-entry #new-journal-entry {
     margin: 0px;
     width: 265px;
     height: 330px;
     margin-left: 13px;
     flex: 5;
+    position: relative;
+    height: 350px;
 }
 
-/* fieldset > div {
-	
-    display: flex;
-    flex-direction: column;
-} */
+#new-journal-entry {
+    padding-top: 16px;
+    padding-left: 12px;
+}
 
+.placeholder {
+    position: absolute;
+    background: white;
+    font-size: 20px;
+}
+#entry-form .placeholder {
+    margin-inline: 10px;
+    width: 95px;
+    margin-top: -10px;
+    color: black;
+    margin-left: -645px;
+    padding-left: 11px;
+}
+
+#new-journal-entry:focus ~ .placeholder,
+#new-journal-entry:valid ~ .placeholder {
+    /* display: none; */
+}
+
+form > div {
+    height: 86px;
+}
 fieldset > div {
     margin-left: 16px;
     font-size: 12px;
     color: rgb(60, 100, 177);
 }
 
+form > div > span {
+    margin-left: 26px;
+    color: black;
+    margin-top: -15px;
+    padding-inline: 15px;
+}
+
 form label {
     text-transform: uppercase;
     margin-block: 11px;
+}
+
+input {
+    position: absolute;
+    left: 0;
 }
 
 input[type="text"],
@@ -161,10 +204,12 @@ select {
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    /* border: 1px solid #ccc;
+    border-radius: 4px; */
     box-sizing: border-box;
     margin-top: -3px;
+    height: 58px;
+    color: grey;
 }
 
 input[type="submit"] {
@@ -224,8 +269,17 @@ fieldset div input {
     margin-inline: 26px;
 }
 
+textarea,
+input,
+select {
+    border: black 2px solid;
+    border-radius: 10px;
+}
+
+input::placeholder {
+    color: grey;
+}
 .field__entry fieldset div {
-    height: 100%;
     flex: 3;
 }
 .field__submit {
@@ -233,12 +287,14 @@ fieldset div input {
 }
 
 #submit {
-    height: 4em;
-    margin-top: 36px;
+    height: 54px;
+    margin-top: 38px;
+    font-size: 22px;
 }
 
 textarea {
-    width: 60%;
+    width: 97%;
+    height: 100%;
 }
 
 #journalEntry {
@@ -248,16 +304,19 @@ textarea {
 
 main form,
 #entryLog {
-    margin-top: -15px;
-    padding-bottom: 1em;
-    padding-left: 33px;
-    padding-right: 0;
+    margin-top: 2px;
+}
+
+form {
+    margin-top: 30px;
+    position: relative;
 }
 
 label,
 input {
     display: inline-block;
     vertical-align: baseline;
+    left: 3px;
 }
 
 form,

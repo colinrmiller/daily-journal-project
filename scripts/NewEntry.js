@@ -4,43 +4,69 @@ export const NewEntry = () => {
     pageElement.innerHTML = `
     <section class="field__entry">
     <fieldset>
-        <textarea
-            id="new-journal-entry"
-            rows="5"
-            cols="60"
-            name="text"
-            placeholder="Enter text"
-        ></textarea>
+        <div id="entry-form">
+            <textarea
+                id="new-journal-entry"
+                rows="5"
+                cols="60"
+                name="text"
+            ></textarea>
+            <span class="placeholder">Enter Text</span>
+        </div>
         <div>
             <form action="/action_page.php">
-                <label for="date">Date</label>
-                <input type="date" id="date" name="date" />
-
-                <label for="concepts-covered"
-                    >Concepts Covered</label
-                >
-                <input
-                    type="text"
-                    id="concepts"
-                    name="concepts-covered"
-                    placeholder="eg. HTML, array methods..."
-                />
-
-                <label for="mood">Mood</label>
-                <select id="mood" name="mood" selectedIndex="2">
-                    <option value="">
-                        --How Are You Feeling Today?--
-                    </option>
-                    <option value="happy">Happy</option>
-                    <option value="sad">Sad</option>
-                    <option value="tired">Tired</option>
-                    <option value="excited">Excited</option>
-                    <option value="calm">Calm</option>
-                    <option value="cranky">Cranky</option>
-                    <option value="dreamy">Dreamy</option>
-                    <option value="dreamy">Good</option>
-                    <option value="dreamy">Pretty Good</option>
-                </select>
+                <div>
+                    <input
+                        type="date"
+                        id="form-date"
+                        name="date"
+                    />
+                    <span class="placeholder" for="date"
+                        >Date</span
+                    >
+                </div>
+                <div>
+                    <input
+                        type="text"
+                        id="form-concepts"
+                        name="concepts-covered"
+                        placeholder="eg. HTML, array methods..."
+                    />
+                    <span
+                        class="placeholder"
+                        for="concepts-covered"
+                        >Concepts Covered</span
+                    >
+                </div>
+                <div>
+                    <span class="placeholder" for="mood"
+                        >Mood</span
+                    >
+                    <select
+                        id="form-mood"
+                        name="mood"
+                        selectedIndex="2"
+                    >
+                        <option
+                            value=""
+                            style="color: grey"
+                            class="default"
+                        >
+                            --How Are You Feeling Today?--
+                        </option>
+                        <option value="happy">Happy</option>
+                        <option value="sad">Sad</option>
+                        <option value="tired">Tired</option>
+                        <option value="excited">Excited</option>
+                        <option value="calm">Calm</option>
+                        <option value="cranky">Cranky</option>
+                        <option value="dreamy">Dreamy</option>
+                        <option value="dreamy">Good</option>
+                        <option value="dreamy">
+                            Pretty Good
+                        </option>
+                    </select>
+                </div>
 
                 <input
                     type="submit"
@@ -49,10 +75,7 @@ export const NewEntry = () => {
                 />
             </form>
         </div>
-        <!-- <label class="journal-entry" for="journalEntry">Journal Entry</label> -->
     </fieldset>
 </section>
-
-
     `;
 };
