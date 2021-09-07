@@ -119,15 +119,38 @@ h1 {
 }
 
 .aside-bar__item h4 {
-    padding-left: 17px;
+    /* padding-left: 17px; */
     margin: auto;
     font-size: 22px;
     margin-left: 10px;
+    max-width: 179px;
 }
 
 .aside-bar__item--icon {
     padding-block: 4%;
     margin-left: 24px;
+}
+
+.aside-bar__item:hover > .hide {
+    background-color: crimson;
+    padding-block: 4%;
+    padding-inline: 8px;
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+    visibility: initial;
+    transition: background-color 0.2s linear 0s;
+}
+.aside-bar__item--delete {
+    width: 0;
+}
+.aside-bar__item--delete img {
+    padding-block: 4%;
+}
+.hide {
+    /* background-image: url(icons/outline_delete_black_24dp.png); */
+    visibility: hidden;
+    width: 42px;
+    /* display: none; */
 }
 
 main {
@@ -226,7 +249,8 @@ input {
 
 input[type="text"],
 input[type="date"],
-select {
+select,
+div.form-button {
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -239,15 +263,56 @@ select {
     color: grey;
 }
 
-input[type="submit"] {
-    width: 100%;
-    background-color: #4caf50;
+.post__options {
     color: white;
     padding: 14px 20px;
     margin: 26px 0;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    display: flex;
+
+    height: 47px;
+
+
+}
+
+#new-post--submit {
+    /* width: 100%; */
+    flex:3;
+    background-color: #4caf50;
+
+    color: white;
+    padding: 14px 20px;
+    margin: 26px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+    height: 100%;
+    margin:0;
+    text-align: center;
+    border: none;
+
+}
+
+.form-button {
+    font: 400 13.3333px Arial;
+    line-height: 24px;
+
+
+}
+#new-post--cancel {
+    flex:2;
+    background-color: rgb(66, 66, 66);
+    position: relative;
+    text-align: center;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    margin-top: 0;
+    margin-right: 27px;
+    height: 100%;
 }
 
 #mood * {
@@ -397,6 +462,7 @@ input {
     justify-content: space-between;
     font-size: 16px;
     padding-right: 1em;
+    margin-bottom: 24px
 }
 */ #entryLog:first-child {
     margin-top: -10px;

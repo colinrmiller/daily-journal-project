@@ -4,11 +4,12 @@
  *    there are items in the collection exposed by the
  *    data module component
  */
+import { deletePost, getPosts } from "./data/DataManager.js";
 import { getJournalEntries } from "./JournalData.js";
 import { getSingleJournalEntry } from "./JournalData.js";
 import { JournalEntryComponent } from "./JournalEntry.js";
 import { JournalSidebarComponent } from "./JournalEntry.js";
-
+import { CreateDeleteEntryEvent } from "./DeleteEntry.js";
 // DOM reference to where all entries will be rendered
 const entryLog = document.querySelector("#entryLog");
 
@@ -27,30 +28,42 @@ export const PopulateAside = () => {
     const asideComponent = document.querySelector(".aside-bar");
 
     asideComponent.innerHTML = "";
-    console.log("cleared aside");
 
-    for (const entry of entries) {
-        asideComponent.innerHTML += JournalSidebarComponent(entry);
-    }
+    getPosts().then((postObjs) => {
+        for (const post of postObjs) {
+            asideComponent.innerHTML += JournalSidebarComponent(post);
+        }
+    });
 
     asideComponent.addEventListener("click", (event) => {
-        console.log(event);
-        console.log(event.target.id);
-
         if (event.target.id.startsWith("aside-entry")) {
             DisplayJournalEntry(event.target.id.split("--")[1]);
         }
+        CreateDeleteEntryEvent();
     });
 };
 
 const DisplayJournalEntry = (entryId) => {
     const pageElement = document.querySelector("#page-body");
-    const entryObject = getSingleJournalEntry(entryId)[0];
-
     const pageHeader = document.querySelector("#page-header");
-    pageHeader.innerHTML = `<h1>Jounral Entry: ${entryObject["date"]}</h1>`;
+    getPosts().then((postObjs) => {
+        let postId;
+        const entryObject = postObjs.find((post) => {
+            postId = post.id;
+            return post.id == entryId;
+        });
 
-    console.log(entryObject);
+        pageHeader.innerHTML = `<h1>Jounral Entry: ${entryObject["date"]}</h1>`;
 
-    pageElement.innerHTML = JournalEntryComponent(entryObject);
+        console.log(entryObject);
+
+        pageElement.innerHTML = JournalEntryComponent(entryObject);
+
+        // add delete functionality
+        const deleteElement = document.querySelector(`#delete--${postId}`);
+        deleteElement.addEventListener("click", () => {
+            deletePost(postId);
+            pageElement.innerHTML = "";
+        });
+    });
 };
