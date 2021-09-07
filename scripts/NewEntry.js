@@ -1,5 +1,11 @@
 export const NewEntry = () => {
-    const pageElement = document.querySelector(".page-body");
+    // populate header
+    const pageHeader = document.querySelector("#page-header");
+
+    pageHeader.innerHTML = `<h1>New Entry</h1>`;
+
+    // populate body
+    const pageElement = document.querySelector("#page-body");
 
     pageElement.innerHTML = `
     <section class="field__entry">

@@ -15,7 +15,7 @@ const entryLog = document.querySelector("#entryLog");
 export const EntryListComponent = () => {
     // Use the journal entry data from the data module component
     const entries = getJournalEntries();
-
+    // populate aside
     for (const entry of entries) {
         entryLog.innerHTML += JournalEntryComponent(entry);
     }
@@ -35,21 +35,21 @@ export const PopulateAside = () => {
 
     asideComponent.addEventListener("click", (event) => {
         console.log(event);
-        if (event.path[0].innerHTML.startsWith("Date")) {
-            console.log(event.path[1].id);
-            console.log("displaying entry:", event.path[1].id.split("--")[1]);
+        console.log(event.target.id);
 
-            DisplayJournalEntry(event.path[1].id.split("--")[1]);
+        if (event.target.id.startsWith("aside-entry")) {
+            DisplayJournalEntry(event.target.id.split("--")[1]);
         }
-        // if (event.path[0] == "img") {
-        //     console.log("icon pressed");
-        // }
     });
 };
 
 const DisplayJournalEntry = (entryId) => {
-    const pageElement = document.querySelector(".page-body");
+    const pageElement = document.querySelector("#page-body");
     const entryObject = getSingleJournalEntry(entryId)[0];
+
+    const pageHeader = document.querySelector("#page-header");
+    pageHeader.innerHTML = `<h1>Jounral Entry: ${entryObject["date"]}</h1>`;
+
     console.log(entryObject);
 
     pageElement.innerHTML = JournalEntryComponent(entryObject);

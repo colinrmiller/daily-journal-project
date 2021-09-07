@@ -25,11 +25,11 @@ export const JournalSidebarComponent = (entry) => {
     //     </section>
     // `;
     return `
-        <div class="aside-bar__item" id="aside-entry--${entry.id}">
+        <a class="aside-bar__item" href="#" id="aside-entry--${entry.id}">
             <div class="aside-bar__item--icon">
                 <img src="icons/outline_article_black_24dp.png" />
             </div>
             <h4>Date: ${entry.date}</h4>
-        </div>
+        </a>
     `;
 };
