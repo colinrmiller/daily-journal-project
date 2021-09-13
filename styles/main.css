@@ -142,6 +142,7 @@ h1 {
 }
 .aside-bar__item--delete {
     width: 0;
+    margin-block: 3px;
 }
 .aside-bar__item--delete img {
     padding-block: 4%;
@@ -200,6 +201,16 @@ fieldset {
 #new-journal-entry {
     padding-top: 16px;
     padding-left: 12px;
+}
+
+textarea:focus,  
+input:focus, 
+select:focus{
+    outline: none;
+
+    border: 3px solid black;
+    border-radius: 10px;
+
 }
 
 .placeholder {
@@ -265,35 +276,26 @@ div.form-button {
 
 .post__options {
     color: white;
-    padding: 14px 20px;
-    margin: 26px 0;
+    padding: 64px 7px;
+    margin: 11px 0;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     display: flex;
-
     height: 47px;
-
-
+    padding-left: 39px;
+    position: absolute;
 }
 
 #new-post--submit {
-    /* width: 100%; */
-    flex:3;
-    background-color: #4caf50;
-
+    flex: 2;
     color: white;
-    padding: 14px 20px;
-    margin: 26px 0;
-    border: none;
+    background-color: #4caf50;
     border-radius: 4px;
-    cursor: pointer;
-    position: relative;
-    height: 100%;
-    margin:0;
-    text-align: center;
-    border: none;
-
+    margin-top: 0;
+    margin-right: 27px;
+    height: 70%;
+    padding-top: 4px;
 }
 
 .form-button {
@@ -303,16 +305,14 @@ div.form-button {
 
 }
 #new-post--cancel {
-    flex:2;
+    flex: 2;
     background-color: rgb(66, 66, 66);
-    position: relative;
-    text-align: center;
     color: white;
-    border: none;
     border-radius: 4px;
     margin-top: 0;
     margin-right: 27px;
-    height: 100%;
+    height: 70%;
+    padding-top: 4px;
 }
 
 #mood * {
@@ -456,7 +456,8 @@ input {
 .journal-entry__text {
     font-size: 24px;
 }
-.journal-entry__footer {
+
+.journal-entry__tags {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -464,6 +465,20 @@ input {
     padding-right: 1em;
     margin-bottom: 24px
 }
+
+.journal-entry__footer {
+    display: flex;
+    justify-content: flex-end;
+
+    padding-block: 11px;
+}
+.journal-entry__footer > * {
+    margin-inline: 5px;
+    width: 60px;
+
+}
+
+
 */ #entryLog:first-child {
     margin-top: -10px;
 }

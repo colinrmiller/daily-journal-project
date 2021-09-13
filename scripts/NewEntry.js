@@ -7,32 +7,38 @@ import { WriteEntry } from "./html/WriteEntry.js";
 // execute display for newEntry
 export const NewEntry = () => {
     WriteHeader(`New Entry`);
-    // const pageHeader = document.querySelector("#page-header");
-
-    // pageHeader.innerHTML = `<h1>New Entry</h1>`;
-
     // populate body
     const pageElement = document.querySelector("#page-body");
-
     pageElement.innerHTML = WriteEntry(null);
+    // eventListeners for NewEntry page
     addEntryClickEvents();
 };
 
 const addEntryClickEvents = () => {
-    // clear post on 'Clear'
+    // clear inputs on 'Clear'
     document.addEventListener("click", (event) => {
         if (event.target.id === "new-post--cancel") {
             ClearPostForm();
         }
     });
-
     // submit form on 'Submit'
     document.addEventListener("click", (event) => {
         // event.preventDefault();
         if (event.target.id === "new-post--submit") {
-            newPostSubmitEventHandler();
+            if (checkFormCompletion()) newPostSubmitEventHandler();
+            else
+                alert(
+                    "Don't you have something to say? \n\nForm text can not be empty."
+                );
         }
     });
+};
+
+const checkFormCompletion = () => {
+    const postText = document.querySelector(
+        "textarea[name='post--text']"
+    ).value;
+    return postText.trim() !== "";
 };
 
 const newPostSubmitEventHandler = () => {

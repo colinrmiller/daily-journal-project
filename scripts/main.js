@@ -10,7 +10,7 @@ import { WriteEntry } from "./html/WriteEntry.js";
 // build sideBar
 PopulateAside();
 
-// add NewEntry Event
+// fill page with NewEntry form
 const addEntryEnvent = document
     .querySelector(".new-entry")
     .addEventListener("click", NewEntry);
